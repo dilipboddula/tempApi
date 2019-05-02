@@ -1,4 +1,5 @@
-{
+[
+    {
       type: "input",
       label: "Username",
       inputType: "text",
@@ -61,4 +62,5 @@
         message: "sno Required"
       }
     ]
-  }
+  },
+  ]
