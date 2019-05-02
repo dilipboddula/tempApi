@@ -1,14 +1,66 @@
-{
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
-}
+[
+    {
+      type: "input",
+      label: "Username",
+      inputType: "text",
+      name: "name",
+      validations: [
+        {
+          name: "required",
+          validator: Validators.required,
+          message: "Name Required"
+        },
+        {
+          name: "pattern",
+          validator: Validators.pattern("^[a-zA-Z]+$"),
+          message: "Accept only text"
+        }
+      ]
+    },
+   
+    {
+      type: "input",
+      label: "Email Address",
+      inputType: "email",
+      name: "email",
+      validations: [
+        {
+          name: "required",
+          validator: Validators.required,
+          message: "Email Required"
+        },
+        {
+          name: "pattern",
+          validator: Validators.pattern(
+            "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
+          ),
+          message: "Invalid email"
+        }
+      ]
+    },
+    {
+      type: "input",
+      label: "Model",
+      inputType: "text",
+      name: "Model",
+      validations: [
+        {
+          name: "required",
+          validator: Validators.required,
+          message: "Model name Required"
+        }
+      ]
+    },
+    { type: "barcode",
+    label: "serial number",
+    inputType: "text",
+    name: "sno",
+    validations: [
+      {
+        name: "required",
+        validator: Validators.required,
+        message: "sno Required"
+      }
+    ]
+  },
+  ]
